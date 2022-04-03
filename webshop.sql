@@ -1,8 +1,8 @@
-drop database if exist demo;
+drop database if exists verkkokauppa;
 
-create database demo;
+create database verkkokauppa;
 
-use demo;
+use verkkokauppa;
 
 create table category (
     id int primary key AUTO_INCREMENT,

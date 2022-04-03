@@ -2,9 +2,9 @@
 require_once "../inc/functions.php";
 require_once "../inc/headers.php";
 
-try(
+try{
     $dp = openDb();
     selectAsJson($dp,"select * from category");
-) catch (PDOException $pdoex) {
+} catch (PDOException $pdoex) {
     returnError($pdoex);
 }
