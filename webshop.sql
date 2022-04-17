@@ -25,7 +25,7 @@ insert into category (name) values ("Red Bullit");
 insert into category (name) values ("Batteryt");
 
 insert into category (name) values ("Monsterit");
-INSERT into product (name, price,category_id) values ("Test Redbulli 1", 3.33, 1);
-INSERT into product (name, price,category_id) values ("Test Battery 1", 2.45, 2);
+INSERT into product (name, price, image, category_id) values ("Test Redbulli 1", 3.33,'teho_pullo.png', 1);
+INSERT into product (name, price, image, category_id) values ("Test Battery 1", 2.45, 'teho_pullo.png', 2);
 
 /* Tää vaa viskataa sinne mysql :) */ 
