@@ -9,7 +9,7 @@ $category_id = filter_var($input->categoryid,FILTER_SANITIZE_FULL_SPECIAL_CHARS)
 
 try{
     $db = openDb();
-    $sql = "insert into product (name,price,image,category_id) values ('$name',$price, 'battery.png',$category_id)";
+    $sql = "insert into product (name,price,image,category_id) values ($name,$price,'battery.png',$category_id)";
     executeInsert($db,$sql);
     $data = array('id' => $db->lastInsertId(),'name' => $name, 'price' => $price,'image' => 'battery.png');
     print json_encode($data);
