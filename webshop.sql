@@ -37,7 +37,7 @@ create table customer (
     lastname VARCHAR(50) not null,
     address VARCHAR(50) not null,
     zip VARCHAR(10) not null,
-    city VARCHAR(30) not null,
+    city VARCHAR(30) not null
 );
 
 create table `order` (
