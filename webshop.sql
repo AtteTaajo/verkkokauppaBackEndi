@@ -13,7 +13,7 @@ create table product (
     id int primary key AUTO_INCREMENT,
     name VARCHAR(255) not null, 
     price double(10,2) not null,
-    image VARCHAR(50),
+    image VARCHAR(255),
     kuvaus VARCHAR(255),
     ravintoarvot VARCHAR(255),
     aineosat VARCHAR(255),
@@ -26,10 +26,13 @@ create table product (
 
 insert into category (name) values ("Red Bullit");
 insert into category (name) values ("Batteryt");
-
 insert into category (name) values ("Monsterit");
+
+
 INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Test Redbulli 1", 3.33,'teho_pullo.png', 'Tämä on tehopullo', 'Sisältää tehoa<br>toine rivi','ainesosia', 1);
 INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Test Battery 1", 2.45, 'battery.png', 'Tämä on battery','testi <br> testi', 'lisäää ainesosia',  2);
+
+
 
 create table customer (
     id int primary key auto_increment,
