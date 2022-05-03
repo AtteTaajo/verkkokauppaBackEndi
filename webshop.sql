@@ -23,10 +23,11 @@ create table product (
 
 insert into category (name) values ("Red Bullit");
 insert into category (name) values ("Batteryt");
-
 insert into category (name) values ("Monsterit");
 INSERT into product (name, price, image, category_id) values ("Test Redbulli 1", 3.33,'https://public.keskofiles.com/f/k-ruoka/product/9002490100773?w=480&h=480&fit=max&auto=format&fm=jpg&cs=srgb', 1);
 INSERT into product (name, price, image, category_id) values ("Test Battery 1", 2.45, 'https://alkostore24.com/media/catalog/product/cache/d93fad4313d058678385fbb1227fb376/7/0/7020447_1.jpg', 2);
+
+
 
 create table customer (
     id int primary key auto_increment,
@@ -34,7 +35,7 @@ create table customer (
     lastname VARCHAR(50) not null,
     address VARCHAR(50) not null,
     zip VARCHAR(10) not null,
-    city VARCHAR(30) not null,
+    city VARCHAR(30) not null
 );
 
 create table `order` (
