@@ -13,7 +13,10 @@ create table product (
     id int primary key AUTO_INCREMENT,
     name VARCHAR(255) not null, 
     price double(10,2) not null,
-    image VARCHAR(255),
+    image VARCHAR(50),
+    kuvaus VARCHAR(255),
+    ravintoarvot VARCHAR(255),
+    aineosat VARCHAR(255),
     category_id int not null,
     index category_id(category_id),
     FOREIGN KEY (category_id) REFERENCES category(id)
@@ -25,16 +28,42 @@ insert into category (name) values ("Red Bullit");
 insert into category (name) values ("Batteryt");
 insert into category (name) values ("Monsterit");
 
-INSERT into product (name, price, image, kuvaus,category_id) values ("Red Bull", 2.95,'https://i.imgur.com/xo3X864.jpeg', 'Original',1);
 
-INSERT into product (name, price, image, kuvaus,category_id) values ("Red Bull Pitaija", 2.45, 'https://i.imgur.com/sGhyZAd.png', 'Green nature', 1);
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Red Bull", 2.95,'https://i.imgur.com/xo3X864.jpeg', 'Original', '','', 1);
 
-INSERT into product (name, price, image, kuvaus,category_id) values ("Red Bull Tropical", 2.95,'https://i.imgur.com/SxD0QBa.jpeg', 'Tropical sunshine', 1);
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Red Bull Pitaija", 2.95, 'https://i.imgur.com/sGhyZAd.png', 'Green nature', '', '',  1);
 
-INSERT into product (name, price, image, kuvaus,category_id) values ("Red Bull Appelsiini", 2.95,'https://i.imgur.com/jBD3VCR.png', 'Fruity', 1);
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Red Bull Tropical", 2.95,'https://i.imgur.com/SxD0QBa.jpeg', 'Tropical sunshine', '','', 1);
 
-INSERT into product (name, price, image, kuvaus,category_id) values ("Red Bull Vesimeloni", 2.95,'https://i.imgur.com/pWbRSWM.jpeg', 'Watermelony melody', 1);
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Red Bull Appelsiini", 2.95,'https://i.imgur.com/jBD3VCR.png', 'Fruity', '','', 1);
 
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Red Bull Vesimeloni", 2.95,'https://i.imgur.com/pWbRSWM.jpeg', 'Watermelony melody', '','', 1);
+
+
+
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Battery",  3.00, 'battery.png', 'Original','', '',  2);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Battery Juiced",  3.00, 'https://i.imgur.com/vwrR5Yk.jpeg', 'Juicy','', '',  2);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Battery Licorice",  3.00, 'https://i.imgur.com/ESirhC5.jpeg', 'Licorice luikautus','', '',  2);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Battery Remix",  3.00, 'https://i.imgur.com/LkdtSnc.jpeg', 'Remixed and mastered','', '',  2);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Battery Jungled",  3.00, 'https://i.imgur.com/FaYKq0Q.jpeg', 'King of the jungle','', '',  2);
+
+
+
+
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Monster",  2.95, 'https://i.imgur.com/4hEWwzm.jpg', 'Original','', '',  3);
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Monster Punch",  2.95, 'https://i.imgur.com/tpm2Txx.jpg', 'Punch your way out','', '',  3);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Monster Juice",  2.95, 'https://i.imgur.com/NcQy0I2.jpg', 'Once again the juice versio','', '',  3);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("https://i.imgur.com/GwJtTQH.png",  2.95, '', 'I dont even know','', '',  3);
+
+INSERT into product (name, price, image, kuvaus, ravintoarvot, aineosat, category_id) values ("Monster Ultra",  2.95, 'https://i.imgur.com/l33nTua.jpeg', 'The one and only','', '',  3);
 
 create table customer (
     id int primary key auto_increment,
