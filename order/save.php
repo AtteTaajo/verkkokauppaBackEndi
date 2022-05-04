@@ -2,6 +2,7 @@
 require_once "../inc/functions.php";
 require_once "../inc/headers.php";
 
+$fname = filter_var($input->firstname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $lname = filter_var($input->lastname,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $address = filter_var($input->address,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 $zip = filter_var($input->zip,FILTER_SANITIZE_FULL_SPECIAL_CHARS);
